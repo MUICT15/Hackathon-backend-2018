@@ -5,19 +5,38 @@
 module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
   const users = new mongooseClient.Schema({
-  
-    email: {type: String, unique: true},
-    password: { type: String },
-    role:{
-      type:String,
-      default: 'consumer',
-      enum:['consumer' , 'freelancer' , ]
+
+    email: {
+      type: String,
+      unique: true
     },
-    skills:{
+    password: {
+      type: String
+    },
+    role: {
+      type: String,
+      default: 'consumer',
+      enum: ['consumer', 'freelancer']
+    },
+    skills: {
       type: Array
-    }
-  
-  
+    },
+    idCard: {
+      type: String
+    },
+    birthDate: {
+      type: String
+    },
+    jobExperince:[{
+      company:{
+        type: String
+      },
+      year:{
+        type: Number
+      }
+    }]
+
+
   }, {
     timestamps: true
   });
