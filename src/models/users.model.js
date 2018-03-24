@@ -10,6 +10,9 @@ module.exports = function (app) {
       type: String,
       // unique: true
     },
+    googleId: {
+      type: String
+    },
     password: {
       type: String
     },
@@ -22,7 +25,7 @@ module.exports = function (app) {
     role: {
       type: String,
       default: 'consumer',
-      enum: ['consumer', 'freelancer', 'premiumFreelancer']
+      enum: ['consumer', 'freelancer', 'premiumFreelancer' , 'bussinessOwner']
     },
     skills: {
       type: Array
@@ -44,6 +47,19 @@ module.exports = function (app) {
       },
       position: {
         type: String
+      }
+    }],
+    jobWorking:[{
+      jobId:{
+        type: String
+      },
+      name:{
+        type: String
+      },
+      status:{
+        type: String,
+        default: 'waiting',
+        enum:['waiting' , 'cancel' , 'complete']
       }
     }],
     ratingReview: [{

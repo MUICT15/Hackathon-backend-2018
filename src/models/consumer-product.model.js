@@ -12,10 +12,18 @@ module.exports = function (app) {
       type: String,
       required: true
     },
+    consumerName:{
+      type:String,
+      required: true
+    },
     typeOfProduct: {
       type: String,
-      enum: ['1', '2'],
+      enum: ['Off the shelf', 'Made to order'],
       required: true
+    },
+    status:{
+      type: String,
+      default: 'waiting'
     },
     title: {
       type: String,
