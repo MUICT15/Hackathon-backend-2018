@@ -10,16 +10,16 @@ module.exports = function (app) {
   const consumerProduct = new Schema({
     consumerID: {
       type: String,
-      required: true
+      // required: true
     },
     consumerName:{
       type:String,
-      required: true
+      // required: true
     },
     typeOfProduct: {
       type: String,
       enum: ['Off the shelf', 'Made to order'],
-      required: true
+      // required: true
     },
     status:{
       type: String,
@@ -27,11 +27,11 @@ module.exports = function (app) {
     },
     title: {
       type: String,
-      required: true
+      // required: true
     },
     detail: {
       type: String,
-      required: true
+      // required: true
     },
     price: {
       type: Number
