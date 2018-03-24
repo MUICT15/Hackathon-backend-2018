@@ -30,16 +30,16 @@
       "passwordField": "password"
     },
     "google": {
-      "clientID": "your google client id",
-      "clientSecret": "your google client secret",
+      "clientID": "11102905009-0s1rssjoe4in6e24e0b2se9c34ao7a1s.apps.googleusercontent.com",
+      "clientSecret": "WMV1PowxHeyupSk1YDyebbzN",
       "successRedirect": "/",
       "scope": [
         "profile openid email"
       ]
     },
     "facebook": {
-      "clientID": "your facebook client id",
-      "clientSecret": "your facebook client secret",
+      "clientID": "469914500007960",
+      "clientSecret": "f279dd35ee1bac272cc79147ff4c1ace",
       "successRedirect": "/",
       "scope": [
         "public_profile",
@@ -62,7 +62,8 @@
       "enabled": true,
       "name": "feathers-jwt",
       "httpOnly": false,
-      "secure": false
+      "secure": false,
+      "domain": "localhost"
     }
   },
   "mongodb": "mongodb://mongodb:27017/backend"

@@ -1,5 +1,5 @@
-module.exports.bid = () =>{
-  return (hook)=>{
-      
+module.exports.addBid = () => {
+  return (hook) => {
+    hook.app.service('consumer-product').create('');
   };
 };

@@ -1,12 +1,12 @@
 const { authenticate } = require('@feathersjs/authentication').hooks;
-const {bid} = require('./hook.functions');
+const {addBid} = require('./hook.functions');
 module.exports = {
   before: {
     all: [ authenticate('jwt') ],
     find: [],
     get: [],
     create: [
-      bid()
+      addBid()
     ],
     update: [],
     patch: [],
