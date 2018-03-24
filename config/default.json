@@ -32,7 +32,7 @@
     "google": {
       "clientID": "11102905009-0s1rssjoe4in6e24e0b2se9c34ao7a1s.apps.googleusercontent.com",
       "clientSecret": "WMV1PowxHeyupSk1YDyebbzN",
-      "successRedirect": "/",
+      "successRedirect": "http://localhost",
       "scope": [
         "profile openid email"
       ]

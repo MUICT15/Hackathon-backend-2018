@@ -8,7 +8,7 @@ module.exports = function (app) {
 
     email: {
       type: String,
-      unique: true
+      // unique: true
     },
     password: {
       type: String
@@ -22,7 +22,7 @@ module.exports = function (app) {
     role: {
       type: String,
       default: 'consumer',
-      enum: ['consumer', 'freelancer' , 'premiumFreelancer']
+      enum: ['consumer', 'freelancer', 'premiumFreelancer']
     },
     skills: {
       type: Array
@@ -45,8 +45,18 @@ module.exports = function (app) {
       position: {
         type: String
       }
+    }],
+    ratingReview: [{
+      name: {
+        type: String
+      },
+      comment: {
+        type: String
+      },
+      rating: {
+        type: String
+      }
     }]
-
   }, {
     timestamps: true
   });

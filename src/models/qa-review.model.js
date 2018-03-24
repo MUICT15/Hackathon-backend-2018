@@ -6,7 +6,13 @@ module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
   const qaReview = new Schema({
-    text: { type: String, required: true }
+    jobID:{
+      type: String,
+      required: true,
+    },detail:{
+      type: String,
+      required: true
+    }
   }, {
     timestamps: true
   });
