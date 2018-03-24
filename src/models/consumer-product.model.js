@@ -4,37 +4,47 @@
 // for more of what you can do here.
 module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
-  const { Schema } = mongooseClient;
+  const {
+    Schema
+  } = mongooseClient;
   const consumerProduct = new Schema({
-    consumerID:{
+    consumerID: {
       type: String,
       required: true
     },
-    typeOfProduct:{
+    typeOfProduct: {
       type: String,
-      enum: ['1' , '2'],
+      enum: ['1', '2'],
       required: true
     },
-    title:{
-      type: String,
-      required: true
-    },
-    detail:{
+    title: {
       type: String,
       required: true
     },
-    price:{
+    detail: {
+      type: String,
+      required: true
+    },
+    price: {
       type: Number
     },
-    freelancers:[{
-      id:{
+    freelancersBid: [{
+      id: {
         type: String
       },
-      name:{
-        type:String
+      name: {
+        type: String
       },
-      price:{
+      price: {
         type: Number
+      }
+    }],
+    freelancerWork: [{
+      id: {
+        type: String
+      },
+      name: {
+        type: String
       }
     }]
   }, {
