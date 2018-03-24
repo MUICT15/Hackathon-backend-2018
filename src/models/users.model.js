@@ -13,10 +13,16 @@ module.exports = function (app) {
     password: {
       type: String
     },
+    name: {
+      type: String
+    },
+    birthDate: {
+      type: String
+    },
     role: {
       type: String,
       default: 'consumer',
-      enum: ['consumer', 'freelancer']
+      enum: ['consumer', 'freelancer' , 'premiumFreelancer']
     },
     skills: {
       type: Array
@@ -24,18 +30,22 @@ module.exports = function (app) {
     idCard: {
       type: String
     },
-    birthDate: {
-      type: String
-    },
-    jobExperince:[{
-      company:{
+    jobExperince: [{
+      company: {
         type: String
       },
-      year:{
+      year: {
         type: Number
       }
+    }],
+    workReference: [{
+      url: {
+        type: String
+      },
+      position: {
+        type: String
+      }
     }]
-
 
   }, {
     timestamps: true
