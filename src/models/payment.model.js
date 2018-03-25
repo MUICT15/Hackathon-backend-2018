@@ -8,18 +8,18 @@ module.exports = function (app) {
   const payment = new Schema({
     consumerID:{
       type: String,
-      required: true
+      // required: true
     },
     jobID:{
       type: String,
-      required: true
+      // required: true
     },
     price:{
       type: Number,
       required: true
     },
     token:{
-      type: Number,
+      type: String,
       required: true
     }
   }, {

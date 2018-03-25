@@ -4,12 +4,14 @@ const omise = require('omise')({
 });
 module.exports.paymentWithCreditCard = () => {
   return async(hook)=>{
+    console.log(hook);
     omise.charges.create({
-      'amount': hook.data.amount,
+      'amount': hook.data.price,
       'currency': 'thb',
-      'card': hook.data.tokenID
+      'card': hook.data.token
     }, (err, resp) => {
       if (!err) {
+        console.log(resp);
         return hook;
       } else {
         console.log(err);

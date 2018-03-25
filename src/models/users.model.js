@@ -10,6 +10,10 @@ module.exports = function (app) {
       type: String,
       // unique: true
     },
+    verify:{
+      type: Boolean,
+      default: false
+    },
     googleId: {
       type: String
     },
@@ -25,7 +29,7 @@ module.exports = function (app) {
     role: {
       type: String,
       default: 'consumer',
-      enum: ['consumer', 'freelancer', 'premiumFreelancer' , 'bussinessOwner']
+      enum: ['consumer', 'freelancer', 'premiumFreelancer' , 'bussinessOwner' , 'admin']
     },
     skills: {
       type: Array
